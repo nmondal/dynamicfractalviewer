@@ -224,7 +224,7 @@ namespace Mandelbrot
 			while (numIterations++ < maxIterations)
             {	
 				
-				currDistSq = z.Magnitude * z.Magnitude;
+				currDistSq = z.Imaginary*z.Imaginary + z.Real*z.Real;
 				
 				if ( currDistSq >  MaxDistance_On_EXP_ConstK )
 					return numIterations ;
@@ -242,7 +242,7 @@ namespace Mandelbrot
             while (numIterations++ < maxIterations)
             {
 
-                currDistSq = z.Magnitude * z.Magnitude;
+                currDistSq = z.Imaginary*z.Imaginary + z.Real*z.Real;
 
                 if (currDistSq > MaxDistance_On_EXP_ConstK)
                     return numIterations;
@@ -260,7 +260,7 @@ namespace Mandelbrot
 			while (numIterations++ < maxIterations)
             {
 
-                currDistSq = z.Magnitude * z.Magnitude;
+                currDistSq = z.Imaginary*z.Imaginary + z.Real*z.Real;
 				
 				if ( currDistSq > MaxDistance_NOVA  )
 					return numIterations ;
@@ -282,7 +282,7 @@ namespace Mandelbrot
 			while (numIterations++ < maxIterations)
             {
 
-                currDistSq = z.Magnitude * z.Magnitude ;
+                currDistSq = z.Imaginary*z.Imaginary + z.Real*z.Real;
                 if (currDistSq > MaxDistance_MULTI )
                     return numIterations;
 
@@ -300,7 +300,7 @@ namespace Mandelbrot
             
             while (numIterations++ < maxIterations)
             {
-                currDistSq = z.Magnitude * z.Magnitude;
+                currDistSq = z.Imaginary*z.Imaginary + z.Real*z.Real;
                 if (currDistSq >  MaxDistance_On_EXP_ConstK * MaxDistance_On_EXP_ConstK )
                     return numIterations;
 
@@ -318,7 +318,7 @@ namespace Mandelbrot
             while (numIterations++ < maxIterations)
             {
 
-                currDistSq = z.Magnitude * z.Magnitude;
+                currDistSq = z.Imaginary*z.Imaginary + z.Real*z.Real;
                 if (currDistSq > MaxDistance_On_EXP_ConstK )
                     return numIterations;
 
@@ -337,7 +337,7 @@ namespace Mandelbrot
 			while (numIterations++ < maxIterations)
             {
 
-                currDistSq = z.Magnitude * z.Magnitude;
+                currDistSq = z.Imaginary*z.Imaginary + z.Real*z.Real;
 				
 				if ( currDistSq > MaxDistance_MULTI )
 					return numIterations ;
@@ -357,7 +357,7 @@ namespace Mandelbrot
 			while (numIterations++ < maxIterations)
             {
 
-                currDistSq = z.Magnitude * z.Magnitude;
+                currDistSq = z.Imaginary*z.Imaginary + z.Real*z.Real;
 				
 				if ( currDistSq > MaxDistance_MULTI )
 					return numIterations ;
@@ -377,7 +377,7 @@ namespace Mandelbrot
 			while (numIterations++ < maxIterations)
             {
 
-                currDistSq = z.Magnitude * z.Magnitude;
+                currDistSq = z.Imaginary*z.Imaginary + z.Real*z.Real;
 				
 				if ( currDistSq > MaxDistance_MULTI )
 					return numIterations ;
@@ -398,7 +398,7 @@ namespace Mandelbrot
 				
 			while (numIterations++ < maxIterations)
             {
-                currDistSq = z.Magnitude * z.Magnitude;
+                currDistSq = z.Imaginary*z.Imaginary + z.Real*z.Real;
 				
 				if ( currDistSq > MaxDistance_On_EXP_ConstK )
 					return numIterations ;
@@ -418,7 +418,7 @@ namespace Mandelbrot
 			while (numIterations++ < maxIterations)
             {
 
-                currDistSq = z.Magnitude * z.Magnitude;
+                currDistSq = z.Imaginary*z.Imaginary + z.Real*z.Real;
 				
 				if ( currDistSq > MaxDistance_MULTI  )
 					return numIterations ;
@@ -439,7 +439,7 @@ namespace Mandelbrot
 			while (numIterations++ < maxIterations)
             {
 
-                currDistSq = z.Magnitude * z.Magnitude;
+                currDistSq = z.Imaginary*z.Imaginary + z.Real*z.Real;
 				
 				if ( currDistSq > MaxDistance_On_EXP_ConstK  )
 					return numIterations ;
@@ -459,7 +459,7 @@ namespace Mandelbrot
 			while (numIterations++ < maxIterations)
             {
 
-                currDistSq = z.Magnitude * z.Magnitude;
+                currDistSq = z.Imaginary*z.Imaginary + z.Real*z.Real;
 				
 				if ( currDistSq > MaxDistance_On_EXP_ConstK )
 					return numIterations ;
@@ -479,7 +479,7 @@ namespace Mandelbrot
 			while (numIterations++ < maxIterations)
             {
 
-                currDistSq = z.Magnitude * z.Magnitude;
+                currDistSq = z.Imaginary*z.Imaginary + z.Real*z.Real;
 				
 				if ( currDistSq > MaxDistance_ConstK )
 					return numIterations ;
@@ -504,7 +504,7 @@ namespace Mandelbrot
             while (numIterations++ < maxIterations)
             {
 
-                currDistSq = z.Magnitude * z.Magnitude;
+                currDistSq = z.Imaginary*z.Imaginary + z.Real*z.Real;
 
                 if (currDistSq > MaxDistance_On_EXP_ConstK )
                     return numIterations;
