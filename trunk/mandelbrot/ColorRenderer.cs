@@ -330,7 +330,7 @@ namespace Mandelbrot
             ColorMap gray = CreateGrayMap();
             maps.Add(gray.Name, gray);
             //Now load others...
-            string mapDirectory =  Environment.CurrentDirectory + @"\ColorMaps" ;
+            string mapDirectory =  Environment.CurrentDirectory +  System.IO.Path.DirectorySeparatorChar +  @"ColorMaps" ;
             string[] files = System.IO.Directory.GetFiles(mapDirectory, "*.ColorMap", SearchOption.TopDirectoryOnly);
             foreach (string file in files)
             {
