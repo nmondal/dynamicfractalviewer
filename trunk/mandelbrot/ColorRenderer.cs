@@ -282,6 +282,24 @@ namespace Mandelbrot
             sw.Close();
             MessageBox.Show("ColorMap Saved!", "ColorMap");
         }
+
+        private void buttonLoad_Click(object sender, EventArgs e)
+        {
+            if (DialogResult.OK == openFileDialog.ShowDialog())
+            {
+                ColorMap map = ColorMap.CreateFromFile(openFileDialog.FileName);
+                if (colorMaps.ContainsKey(map.Name))
+                {
+                    MessageBox.Show("Dude, that ColorMap seems to be loaded already!", "");
+                }
+                else 
+                {
+                    colorMaps.Add(map.Name, map);
+                    currentColorMap = map;
+                    PaintUI();
+                }
+            }
+        }
        
     }
 

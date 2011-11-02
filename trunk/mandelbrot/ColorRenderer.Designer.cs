@@ -43,12 +43,14 @@
             this.buttonGradient = new System.Windows.Forms.Button();
             this.buttonSaveMap = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.buttonLoad = new System.Windows.Forms.Button();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // buttonOK
             // 
             this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonOK.Location = new System.Drawing.Point(664, 162);
+            this.buttonOK.Location = new System.Drawing.Point(416, 166);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(48, 23);
             this.buttonOK.TabIndex = 0;
@@ -128,7 +130,7 @@
             // 
             // buttonAddColor
             // 
-            this.buttonAddColor.Location = new System.Drawing.Point(418, 132);
+            this.buttonAddColor.Location = new System.Drawing.Point(416, 132);
             this.buttonAddColor.Name = "buttonAddColor";
             this.buttonAddColor.Size = new System.Drawing.Size(33, 23);
             this.buttonAddColor.TabIndex = 23;
@@ -138,7 +140,7 @@
             // 
             // buttonAddMap
             // 
-            this.buttonAddMap.Location = new System.Drawing.Point(294, 133);
+            this.buttonAddMap.Location = new System.Drawing.Point(290, 133);
             this.buttonAddMap.Name = "buttonAddMap";
             this.buttonAddMap.Size = new System.Drawing.Size(112, 23);
             this.buttonAddMap.TabIndex = 24;
@@ -148,7 +150,7 @@
             // 
             // buttonGradient
             // 
-            this.buttonGradient.Location = new System.Drawing.Point(205, 133);
+            this.buttonGradient.Location = new System.Drawing.Point(203, 133);
             this.buttonGradient.Name = "buttonGradient";
             this.buttonGradient.Size = new System.Drawing.Size(75, 23);
             this.buttonGradient.TabIndex = 25;
@@ -158,7 +160,7 @@
             // 
             // buttonSaveMap
             // 
-            this.buttonSaveMap.Location = new System.Drawing.Point(500, 133);
+            this.buttonSaveMap.Location = new System.Drawing.Point(463, 133);
             this.buttonSaveMap.Name = "buttonSaveMap";
             this.buttonSaveMap.Size = new System.Drawing.Size(167, 23);
             this.buttonSaveMap.TabIndex = 26;
@@ -169,6 +171,22 @@
             // saveFileDialog
             // 
             this.saveFileDialog.DefaultExt = "ColorMap";
+            this.saveFileDialog.Filter = "ColorMap files (*.ColorMap)|*.ColorMap";
+            // 
+            // buttonLoad
+            // 
+            this.buttonLoad.Location = new System.Drawing.Point(637, 134);
+            this.buttonLoad.Name = "buttonLoad";
+            this.buttonLoad.Size = new System.Drawing.Size(75, 23);
+            this.buttonLoad.TabIndex = 27;
+            this.buttonLoad.Text = "Load...";
+            this.buttonLoad.UseVisualStyleBackColor = true;
+            this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog";
+            this.openFileDialog.Filter = "ColorMap files (*.ColorMap)|*.ColorMap";
             // 
             // ColorRenderer
             // 
@@ -176,6 +194,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(724, 195);
+            this.Controls.Add(this.buttonLoad);
             this.Controls.Add(this.buttonSaveMap);
             this.Controls.Add(this.buttonGradient);
             this.Controls.Add(this.buttonAddMap);
@@ -216,5 +235,7 @@
         private System.Windows.Forms.Button buttonGradient;
         private System.Windows.Forms.Button buttonSaveMap;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
+        private System.Windows.Forms.Button buttonLoad;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }
