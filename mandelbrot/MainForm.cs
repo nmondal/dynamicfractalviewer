@@ -432,13 +432,20 @@ namespace Mandelbrot
         {
             SaveFileDialog saveDialog = new SaveFileDialog();
             saveDialog.DefaultExt = "png";
-            saveDialog.FileName = string.Format("[{0}]_[{1}]_[{2}]_Fractal.png", Fractals.CurrentTransformType.ToString(), Fractals.ConstK.ToString(), Fractals.ConstPhase.ToString());
-            saveDialog.Filter = "Portable Network Graphics (*.png)|*.png";
+            saveDialog.FileName = string.Format("[{0}]_[{1}]_[{2}]_Fractal", Fractals.CurrentTransformType.ToString(), Fractals.ConstK.ToString(), Fractals.ConstPhase.ToString());
+            saveDialog.Filter = "Portable Network Graphics (*.png)|*.png | Tiff Images (*.tiff)|*.tiff";
 
             if (saveDialog.ShowDialog() == DialogResult.OK)
                 try
                 {
-                    bmpMandSet.Save(saveDialog.FileName);
+					if ( saveDialog.FilterIndex == 0 )
+					{
+						bmpMandSet.Save(saveDialog.FileName );
+					}
+					else
+					{
+						bmpMandSet.Save ( saveDialog.FileName , System.Drawing.Imaging.ImageFormat.Tiff );
+					}
                 }
                 catch (Exception ex)
                 {
