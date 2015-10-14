@@ -37,10 +37,11 @@ namespace Mandelbrot
 
         public static Color GetColor(double x)
         {
+			// Do not ever ask why this is done this way, but this works, awesomely.
+			x = x*(1 - Math.Exp (-K * x));
             int inx = (int)(currentColorMap.colors.Length * x);
             //System.Diagnostics.Debug.Assert(inx != 255,"255");
             return currentColorMap.colors[inx];
-            
         }
 
         public ColorRenderer()
